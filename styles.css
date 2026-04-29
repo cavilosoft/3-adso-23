@@ -1,0 +1,535 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #050b16;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 92%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  background-color: #0b1427;
+  border-bottom: 1px solid #16233f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+
+.logo-text p {
+  font-size: 15px;
+  color: #7db1ff;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #4ea1ff;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+    padding: 60px 0;
+    background-image: url("assets/hero.png");
+    background-size: cover;       /* ocupa todo */
+    background-position: center;  /* centrada */
+    background-repeat: no-repeat;
+}
+
+/* Asegura que el contenido quede encima */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  line-height: 1.08;
+  max-width: 620px;
+  margin-bottom: 18px;
+}
+
+.hero-text p {
+  font-size: 22px;
+  color: #d2ddf7;
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn {
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #245dff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3b78ff;
+}
+
+.btn-secondary {
+  border: 1px solid #4a6aa3;
+  color: white;
+  background-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: #12203d;
+}
+
+.btn-ver {
+    display: inline-block;
+    margin-top: 15px;
+    align-self: center;
+    color: #4ea1ff;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #4ea1ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.btn-ver:hover {
+    background-color: #4ea1ff;
+    color: #fff;
+}
+
+/* =========================
+   CONTEXTO
+========================= */
+.context-section {
+  padding: 24px 0;
+}
+
+.context-card {
+  background-color: #0b1427;
+  border: 1px solid #18284a;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.context-image {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.context-image img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.context-text h3 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.context-text p {
+  font-size: 16px;
+  color: #d6e0f5;
+  margin-bottom: 14px;
+  max-width: 850px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.cards-section {
+  padding: 10px 0 24px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cards-row {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cada card ocupa el mismo espacio */
+.info-card {
+    flex: 1;
+    align-self: center; 
+}
+
+.info-card {
+  background-color: #0b1427;
+  border: 1px solid #18284a;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.info-card h3 {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.info-card h4 {
+    font-size: 18px; /* antes muy grande */
+}
+
+.mini-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid #16233f;
+}
+
+.mini-item:last-child {
+  border-bottom: none;
+}
+
+.mini-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mini-item h4 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.mini-item p {
+  font-size: 16px;
+  color: #d0daf0;
+}
+
+/* =========================
+   DIRECTORIO
+========================= */
+.directory-section {
+  padding-bottom: 24px;
+}
+
+.directory-card {
+  background-color: #0b1427;
+  border: 1px solid #18284a;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.directory-card h3 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.employee {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #16233f;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.employee:last-child {
+  border-bottom: none;
+}
+
+.employee:hover {
+  background-color: #101b33;
+}
+
+.employee img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.employee h4 {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+
+.employee p {
+  font-size: 18px;
+  color: #cfd9ef;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: #0b1427;
+  border-top: 1px solid #16233f;
+  padding: 22px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  font-size: 18px;
+  color: #f0f5ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .hero-content,
+  .context-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-text h2 {
+    font-size: 42px;
+  }
+
+  .context-text h3,
+  .info-card h3,
+  .directory-card h3 {
+    font-size: 24px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image-box {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-text p,
+  .context-text p,
+  .mini-item p,
+  .employee p,
+  .footer-content p {
+    font-size: 16px;
+  }
+
+  .logo-text h1 {
+    font-size: 24px;
+  }
+
+  .mini-item h4,
+  .employee h4 {
+    font-size: 20px;
+  }
+  
+}
+
+.employee-link {
+  display: block;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #101b33;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.employee-link:hover {
+  background-color: #1d2c50;
+  color: #4ea1ff;
+}
+
+/* =========================
+   SECCIONES POR LETRA
+========================= */
+.cards-section[id] {
+    margin-top: 28px;          /* espacio arriba entre letras */
+}
+
+/* Línea divisora elegante */
+.cards-section[id] .info-card {
+    border-top: 2px solid #1f3157;
+    padding-top: 22px;
+}
+
+/* Título de la letra */
+.cards-section[id] h3 {
+    font-size: 26px;
+    color: #4ea1ff;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+/* Si quieres aún más separación visual */
+.cards-section[id]:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+/* CONTENEDOR DEL ABC */
+.alfabeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;              /* separación entre letras */
+    margin-top: 15px;
+}
+
+/* LINKS DE CADA LETRA */
+.alfabeto a {
+    display: inline-block;
+    min-width: 36px;
+    text-align: center;
+    padding: 8px 10px;
+    background-color: #101b33;
+    color: #4ea1ff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.alfabeto a:hover {
+    background-color: #1f3157;
+    color: #ffffff;
+}
+
+/* LETRA ACTIVA AL DAR CLICK */
+.alfabeto a:focus {
+    outline: none;
+    background-color: #245dff;
+    color: white;
+}
+
+/* FOTO DEL PERFIL */
+.foto-perfil {
+    width: 180px;          /* tamaño más pequeño */
+    height: 180px;         /* mismo alto para círculo perfecto */
+    object-fit: cover;     /* recorta sin deformar */
+    border-radius: 50%;    /* circular */
+    display: block;
+    margin: 0 auto 20px auto; /* centrada */
+    border: 3px solid #1f3157;
+}
+
+/* CONTENEDOR DEL PERFIL */
+.perfil-empleado {
+    max-width: 500px;
+    margin: auto;
+}
